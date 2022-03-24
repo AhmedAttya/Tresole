@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">Tresole</string>
+    <string name="facebook_application_id" translatable="false">5006043566084470</string>
+    <!-- Facebook Application ID, prefixed by 'fb'. Enables Chrome Custom tabs. -->
+    <string name="fb_application_id" translatable="false">5006043566084470</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb5006043566084470</string>
+    <string name="fb_login_protocol_scheme">fb5006043566084470</string>
+    <string name="facebook_client_token">6a36c8438d378749b3a0041f02e903f2</string>
+    <string name="fb_client_token">6a36c8438d378749b3a0041f02e903f2</string>
+    <string name="facebook_app_id">5006043566084470</string>
+    <string name="fb_app_id">5006043566084470</string>
+    <string name="search_title">Search</string>
+    <string name="categories_title">Categories</string>
+    <string name="menu_title">menu</string>
+    <string name="shopping_kart_title">shopping kart</string>
+    <string name="account_title">user account</string>
+    <string name="Search_Fragment_TAG">search bdod</string>
+    <string name="newandhottext">New and Hot Items :</string>
+    <string name="dealoftheday">Deal of the Day :</string>
+    <string name="Recommendeditems">Recommended Items :</string>
+    <string name="simpleitemprice">1000 EGP</string>
+    <string name="simpleitemname">test item name</string>
+    <string name="frequentlyboughtitems">Frequently Bought Items :</string>
+    <string name="EGP">EGP</string>
+    <string name="available">available</string>
+    <string name="unavialable">Unavailable</string>
+    <string name="freeshipping">Free Shipping</string>
+    <string name="notfreeshipping">Eligible for free shipping in orders more than 300 EGP</string>
+    <string name="buynow">Buy Now</string>
+    <string name="addtokart">Add to Kart</string>
+    <string name="ratethisproduct">"Rate this product : "</string>
+    <string name="ratebutton">Rate</string>
+    <string name="brandname">"Brand : "</string>
+    <string name="lifestyle">Lifestyle</string>
+    <string name="home_appliances">Home Appliances</string>
+    <string name="computer_parts">Computer Parts</string>
+    <string name="game_consoles">Game Consoles</string>
+    <string name="kitchen_and_cooking">Kitchen and Cooking</string>
+    <string name="fashion">Fashion</string>
+    <string name="makeup">Makeup</string>
+    <string name="groceries">Groceries</string>
+    <string name="toys">Toys</string>
+    <string name="home_entertainment">Home Entertainment</string>
+    <string name="video_games">Video Games</string>
+    <string name="cellphones">Cellphones</string>
+    <string name="electronics">Electronics</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="searchinputhint">Enter Name Of the Product</string>
+    <string name="Searchbutton">Search</string>
+    <string name="warningmessage">Please enter Product Name</string>
+    <string name="proceed">Proceed To Checkout</string>
+    <string name="contineushopping">Continue Shopping</string>
+    <string name="total">Total Price :</string>
+    <string name="expirationmonth">month</string>
+    <string name="expirationyear">year</string>
+    <string name="expirationdate">Expiration Date :</string>
+    <string name="proced">proceed</string>
+    <string name="nameinputfullname">Full Name</string>
+    <string name="addressinput">Address</string>
+    <string name="cityinput">city</string>
+    <string name="stateinput">State or Governorate</string>
+    <string name="zipinput">zip code</string>
+    <string name="phoneinout">Phone Number</string>
+    <string name="COD">Cash on delivery</string>
+    <string name="creditcard">Credit Card</string>
+    <string name="nameoncardinput">Name on Card</string>
+    <string name="cardnumberinput">Card number</string>
+    <string name="nonameentered">No Name Entered</string>
+    <string name="noaddressentered">No Address Entered</string>
+    <string name="nocityentered">No City Entered</string>
+    <string name="nostaateentered">no State or Governorate entered</string>
+    <string name="nophonenumberentered">No Phone Number Entered</string>
+    <string name="nomonthentered">No Month entered</string>
+    <string name="noyearentered">No Year Entered</string>
+    <string name="noccnameentered">No Credit Card Name</string>
+    <string name="noccnumberentered">No Credit Card Number Entered</string>
+    <string name="selectpaymentmethod">Select Payment Method</string>
+    <string name="current_shipments">Current Shipments</string>
+    <string name="order_id">Order ID :</string>
+    <string name="order_date">Order Date :</string>
+    <string name="arrival_data">Arrival Data :</string>
+    <string name="total_price">Total Price :</string>
+    <string name="welcome">"Welcome "</string>
+    <string name="no_shipments">No Shipments</string>
+    <string name="discount"> Discount</string>
+    <string name="loading_screen">Loading Screen</string>
+
+</resources>

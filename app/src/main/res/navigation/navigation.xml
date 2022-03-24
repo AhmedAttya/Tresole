@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/login_Fargment">
+
+
+    <fragment
+        android:id="@+id/login_Fargment"
+        android:name="com.tresole.tresole.Login.Login_Fargment"
+        android:label="login__fargment_fragment"
+        tools:layout="@layout/login__fargment_fragment" >
+        <action
+            android:id="@+id/action_login_Fargment_to_store"
+            app:destination="@id/store" />
+    </fragment>
+    <fragment
+        android:id="@+id/store"
+        android:name="com.tresole.tresole.Main.StoreFragment"
+        android:label="store_fragment"
+        tools:layout="@layout/store_fragment" >
+        <action
+            android:id="@+id/action_store_to_search22"
+            app:destination="@id/search2" />
+        <action
+            android:id="@+id/action_store_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/search2"
+        android:name="com.tresole.tresole.search.SearchFragment"
+        android:label="serch_fragment"
+
+        tools:layout="@layout/serch_fragment" >
+        <action
+            android:id="@+id/action_search2_to_itemviewFragment"
+            app:destination="@id/itemviewFragment" />
+        <action
+            android:id="@+id/action_search2_to_store"
+            app:destination="@id/store" />
+        <action
+            android:id="@+id/action_search2_to_searchResultFragment"
+            app:destination="@id/searchResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.tresole.tresole.Categories.categoriesFragment"
+        android:label="categories_fragment"
+        tools:layout="@layout/categories_fragment" >
+        <action
+            android:id="@+id/action_categoriesFragment_to_store"
+            app:destination="@id/store" />
+        <action
+            android:id="@+id/action_categoriesFragment_to_categoyshowingFragment"
+            app:destination="@id/categoyshowingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemviewFragment"
+        android:name="com.tresole.tresole.ItemView.itemviewFragment"
+        android:label="itemview_fragment"
+        tools:layout="@layout/itemview_fragment" >
+        <action
+            android:id="@+id/action_itemviewFragment_to_kartFragment"
+            app:destination="@id/kartFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_search2"
+        app:destination="@id/search2" />
+    <fragment
+        android:id="@+id/account2"
+        android:name="com.tresole.tresole.Account.AccountFragment"
+        android:label="account_fragment"
+        tools:layout="@layout/account_fragment" />
+    <fragment
+        android:id="@+id/kartFragment"
+        android:name="com.tresole.tresole.Kart.KartFragment"
+        android:label="kart_fragment"
+        tools:layout="@layout/kart_fragment" >
+        <action
+            android:id="@+id/action_kartFragment_to_checkOutFragment"
+            app:destination="@id/checkOutFragment" />
+        <action
+            android:id="@+id/action_kartFragment_to_store"
+            app:destination="@id/store" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_kartFragment"
+        app:destination="@id/kartFragment" />
+    <action
+        android:id="@+id/action_global_account2"
+        app:destination="@id/account2" />
+    <action
+        android:id="@+id/action_global_categoriesFragment"
+        app:destination="@id/categoriesFragment" />
+    <action
+        android:id="@+id/action_global_itemviewFragment"
+        app:destination="@id/itemviewFragment" />
+    <fragment
+        android:id="@+id/categoyshowingFragment"
+        android:name="com.tresole.tresole.Categories.CategoyshowingFragment"
+        android:label="fragment_categoyshowing"
+        tools:layout="@layout/fragment_categoyshowing" >
+        <action
+            android:id="@+id/action_categoyshowingFragment_to_itemviewFragment"
+            app:destination="@id/itemviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchResultFragment"
+        android:name="com.tresole.tresole.search.SearchResultFragment"
+        android:label="fragment_search_result"
+        tools:layout="@layout/fragment_search_result" >
+        <action
+            android:id="@+id/action_searchResultFragment_to_itemviewFragment"
+            app:destination="@id/itemviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkOutFragment"
+        android:name="com.tresole.tresole.Kart.CheckOutFragment"
+        android:label="fragment_check_out"
+        tools:layout="@layout/fragment_check_out" >
+        <action
+            android:id="@+id/action_checkOutFragment_to_store"
+            app:destination="@id/store" />
+    </fragment>
+</navigation>

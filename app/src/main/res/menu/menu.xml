@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+
+    <item
+        android:id="@+id/search_menu_item"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search_title"
+        app:showAsAction="always" />
+
+     <item
+         android:id="@+id/account"
+         android:title="@string/account_title"
+         android:icon="@drawable/outline_account_circle_24"
+         app:showAsAction="always"
+         >
+
+     </item>
+    <item
+        android:id="@+id/shoppingkart"
+        android:title="@string/shopping_kart_title"
+        android:icon="@drawable/outline_shopping_cart_24"
+        app:showAsAction="always"
+        >
+
+    </item>
+
+</menu>

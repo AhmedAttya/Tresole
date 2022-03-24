@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "460033801616",
+    "firebase_url": "https://tresole-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "tresole",
+    "storage_bucket": "tresole.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460033801616:android:264caf6cfa1f975a224715",
+        "android_client_info": {
+          "package_name": "com.tresole.tresole"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460033801616-of1eencs6gckuci8hca4opchep43b2lk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tresole.tresole",
+            "certificate_hash": "43995e5b9260278a04a272bf174421d86e669cff"
+          }
+        },
+        {
+          "client_id": "460033801616-uotkfuig90gdr1dp4nsogfd6jmd7i2h5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAI6-qOnVwtxk2K83qYeO9wTIjK6xQLz5Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460033801616-uotkfuig90gdr1dp4nsogfd6jmd7i2h5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

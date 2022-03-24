@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_marginTop="@dimen/ScrollViewMargin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    tools:context=".Main.StoreFragment"
+    android:layout_height="match_parent">
+
+
+<LinearLayout
+    android:id="@+id/storefragmentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:id="@+id/dealofthedaytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textSize="@dimen/textsize"
+        android:paddingStart="@dimen/paddingleft"
+        android:paddingEnd="@dimen/paddingleft"
+        android:textStyle="bold"
+        android:text="@string/dealoftheday" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dealofthedayrecyclerview"
+        android:nestedScrollingEnabled="false"
+        android:layout_width="match_parent"
+        android:paddingStart="@dimen/paddingleft"
+        android:paddingEnd="@dimen/paddingleft"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginBottom ="8dp"
+        />
+
+    <TextView
+        android:id="@+id/newandhotitemstextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/newandhottext"
+        android:paddingEnd="@dimen/paddingleft"
+        android:textSize="@dimen/textsize"
+        android:paddingStart="@dimen/paddingleft"
+        android:layout_marginBottom ="8dp"
+        android:textStyle="bold"
+       />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hotandnewrecyclerview"
+        android:layout_width="match_parent"
+        android:paddingEnd="@dimen/paddingleft"
+        android:nestedScrollingEnabled="false"
+        android:paddingStart="@dimen/paddingleft"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        />
+
+    <TextView
+        android:id="@+id/recommendeditemstextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/paddingleft"
+        android:paddingEnd="@dimen/paddingleft"
+        android:textSize="@dimen/textsize"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom ="8dp"
+
+        android:text="@string/Recommendeditems" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Recommendeditemsrecyclerview"
+        android:paddingStart="@dimen/paddingleft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/paddingleft"
+        android:nestedScrollingEnabled="false"
+        android:layout_marginBottom ="8dp"
+        />
+
+    <TextView
+        android:id="@+id/frequentlyboughtitemstextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/frequentlyboughtitems"
+        android:paddingStart="@dimen/paddingleft"
+        android:textSize="@dimen/textsize"
+        android:paddingEnd="@dimen/paddingleft"
+        android:textStyle="bold"
+         />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/frequentlyboughtitemsrecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:nestedScrollingEnabled="false"
+        android:paddingEnd="@dimen/paddingleft"
+        android:paddingStart="@dimen/paddingleft"
+        android:layout_marginBottom ="8dp"
+         />
+</LinearLayout>
+
+</ScrollView>

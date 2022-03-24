@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/checkoutlayoutpaddingtop"
+    tools:context=".Kart.CheckOutFragment">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/nameinput"
+        android:hint="@string/nameinputfullname"
+        android:digits="qwertzuiopasdfghjklyxcvbnm"
+        android:layout_marginTop="@dimen/checkoutitemmargintop"
+        android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/checkoutmarginstrt"
+        android:layout_marginEnd="@dimen/checkoutmarginend"
+        android:inputType="text"
+
+        android:minHeight="48dp"
+        app:startIconDrawable="@drawable/account"
+        app:endIconMode="clear_text"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/addressinput"
+        android:hint="@string/addressinput"
+        android:digits="0,1,2,3,4,5,6,7,8,9,*,qwertzuiopasdfghjklyxcvbnm,_,-"
+        app:startIconDrawable="@drawable/home"
+        app:endIconMode="clear_text"
+        android:layout_marginTop="@dimen/checkoutitemmargintop"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginStart="@dimen/checkoutmarginstrt"
+            android:layout_marginEnd="@dimen/checkoutmarginend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cityinput"
+        app:startIconDrawable="@drawable/home"
+        android:layout_marginTop="@dimen/checkoutitemmargintop"
+        android:digits="qwertzuiopasdfghjklyxcvbnm"
+
+        app:endIconMode="clear_text"
+        android:hint="@string/cityinput"
+        android:inputType="textAutoComplete"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginStart="@dimen/checkoutmarginstrt"
+            android:layout_marginEnd="@dimen/checkoutmarginend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/stateinput"
+        android:digits="qwertzuiopasdfghjklyxcvbnm"
+        app:startIconDrawable="@drawable/home"
+        android:layout_marginTop="@dimen/checkoutitemmargintop"
+        android:hint="@string/stateinput"
+        app:endIconMode="clear_text"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:inputType="textAutoComplete"
+            android:layout_marginStart="@dimen/checkoutmarginstrt"
+            android:layout_marginEnd="@dimen/checkoutmarginend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/zipcodeinput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:startIconDrawable="@drawable/home"
+        app:endIconMode="clear_text"
+        android:layout_marginTop="@dimen/checkoutitemmargintop"
+        android:hint="@string/zipinput"
+        android:layout_marginStart="@dimen/checkoutmarginstrt"
+            android:layout_marginEnd="@dimen/checkoutmarginend"
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/phoneinput"
+        android:hint="@string/phoneinout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:startIconDrawable="@drawable/phone"
+        app:endIconMode="clear_text"
+        android:layout_marginTop="@dimen/checkoutitemmargintop"
+        android:inputType="number"
+            android:layout_marginStart="@dimen/checkoutmarginstrt"
+            android:layout_marginEnd="@dimen/checkoutmarginend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:id="@+id/checkoutCODradionbutton"
+                android:text="@string/COD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/checkoutCCradionbutton"
+                android:text="@string/creditcard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </RadioButton>
+
+        </RadioGroup>
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/ccnameinput"
+        android:visibility="gone"
+        app:endIconMode="clear_text"
+        android:hint="@string/nameoncardinput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="@dimen/checkoutitemmargintop"
+        app:startIconDrawable="@drawable/creditcard"
+        android:layout_marginStart="@dimen/checkoutmarginstrt"
+        android:inputType="text"
+        android:layout_marginEnd="@dimen/checkoutmarginend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/ccnumberinput"
+        android:hint="@string/cardnumberinput"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/checkoutitemmargintop"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/creditcard"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginStart="@dimen/checkoutmarginstrt"
+        android:inputType="number"
+        android:layout_marginEnd="@dimen/checkoutmarginend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:id="@+id/cclayout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/checkoutitemmargintop"
+        android:orientation="horizontal">
+        <TextView
+            android:text="@string/expirationdate"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ccmonthmenu"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="@dimen/ccmenupaddingstrt"
+            android:layout_height="wrap_content"
+            android:hint="@string/expirationmonth">
+
+            <AutoCompleteTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ccyearmenu"
+            android:layout_marginStart="@dimen/ccmenupaddingstrt"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/expirationyear">
+
+            <AutoCompleteTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/proceedbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/proced"
+        android:layout_gravity="center">
+
+    </Button>
+</LinearLayout>
+</ScrollView>
