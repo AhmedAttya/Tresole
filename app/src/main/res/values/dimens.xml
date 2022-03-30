@@ -45,4 +45,5 @@
     <dimen name="itemviewimageheight">200dp</dimen>
     <dimen name="itemviewimagewidth">200dp</dimen>
     <dimen name="emptyRVmessgetextsie">20sp</dimen>
+    <dimen name="linearshipmentinfomarginstart">8dp</dimen>
 </resources>

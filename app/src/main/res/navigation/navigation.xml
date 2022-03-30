@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/login_Fargment"
-        android:name="com.tresole.tresole.Login.Login_Fargment"
+        android:name="com.tresole.tresole.login.LoginFargment"
         android:label="login__fargment_fragment"
         tools:layout="@layout/login__fargment_fragment" >
         <action
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/store"
-        android:name="com.tresole.tresole.Main.StoreFragment"
+        android:name="com.tresole.tresole.main.StoreFragment"
         android:label="store_fragment"
         tools:layout="@layout/store_fragment" >
         <action
@@ -45,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/categoriesFragment"
-        android:name="com.tresole.tresole.Categories.categoriesFragment"
+        android:name="com.tresole.tresole.categories.CategoriesFragment"
         android:label="categories_fragment"
         tools:layout="@layout/categories_fragment" >
         <action
@@ -57,7 +57,7 @@
     </fragment>
     <fragment
         android:id="@+id/itemviewFragment"
-        android:name="com.tresole.tresole.ItemView.itemviewFragment"
+        android:name="com.tresole.tresole.itemView.ItemviewFragment"
         android:label="itemview_fragment"
         tools:layout="@layout/itemview_fragment" >
         <action
@@ -69,12 +69,16 @@
         app:destination="@id/search2" />
     <fragment
         android:id="@+id/account2"
-        android:name="com.tresole.tresole.Account.AccountFragment"
+        android:name="com.tresole.tresole.account.AccountFragment"
         android:label="account_fragment"
-        tools:layout="@layout/account_fragment" />
+        tools:layout="@layout/account_fragment" >
+        <action
+            android:id="@+id/action_account2_to_login_Fargment"
+            app:destination="@id/login_Fargment" />
+    </fragment>
     <fragment
         android:id="@+id/kartFragment"
-        android:name="com.tresole.tresole.Kart.KartFragment"
+        android:name="com.tresole.tresole.kart.KartFragment"
         android:label="kart_fragment"
         tools:layout="@layout/kart_fragment" >
         <action
@@ -98,7 +102,7 @@
         app:destination="@id/itemviewFragment" />
     <fragment
         android:id="@+id/categoyshowingFragment"
-        android:name="com.tresole.tresole.Categories.CategoyshowingFragment"
+        android:name="com.tresole.tresole.categories.CategoyshowingFragment"
         android:label="fragment_categoyshowing"
         tools:layout="@layout/fragment_categoyshowing" >
         <action
@@ -116,7 +120,7 @@
     </fragment>
     <fragment
         android:id="@+id/checkOutFragment"
-        android:name="com.tresole.tresole.Kart.CheckOutFragment"
+        android:name="com.tresole.tresole.kart.CheckOutFragment"
         android:label="fragment_check_out"
         tools:layout="@layout/fragment_check_out" >
         <action

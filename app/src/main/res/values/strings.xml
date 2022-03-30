@@ -85,5 +85,7 @@
     <string name="no_shipments">No Shipments</string>
     <string name="discount"> Discount</string>
     <string name="loading_screen">Loading Screen</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="textview">TextView</string>
 
 </resources>

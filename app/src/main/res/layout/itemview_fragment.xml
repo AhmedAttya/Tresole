@@ -2,7 +2,7 @@
 <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    tools:context=".ItemView.itemviewFragment"
+    tools:context=".itemView.ItemviewFragment"
     android:layout_width="match_parent"
     android:layout_marginTop="@dimen/itemviewscrollviewmargintop"
     android:fillViewport="true"

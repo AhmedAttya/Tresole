@@ -11,7 +11,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:paddingTop="@dimen/checkoutlayoutpaddingtop"
-    tools:context=".Kart.CheckOutFragment">
+    tools:context=".kart.CheckOutFragment">
 
 
     <com.google.android.material.textfield.TextInputLayout

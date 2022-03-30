@@ -1,22 +1,22 @@
 package com.tresole.tresole.search
 
 import androidx.lifecycle.ViewModel
-import com.tresole.tresole.Util.currentitem
-import com.tresole.tresole.Util.item
-import com.tresole.tresole.Util.itemutils
-import com.tresole.tresole.repository.repository
+import com.tresole.tresole.util.Currentitem
+import com.tresole.tresole.util.Item
+import com.tresole.tresole.util.Itemutils
+import com.tresole.tresole.repository.Repository
 
 class SearchViewModel : ViewModel() {
-    val repo=repository()
+    private val repo=Repository()
     fun search(text: String) {
-      itemutils.searcheditems=  repo.search(text)
+      Itemutils.searcheditems=  repo.search(text)
     }
-    fun getsearcheditem(): MutableList<item> {
-        return itemutils.searcheditems
+    fun getsearcheditem(): MutableList<Item> {
+        return Itemutils.searcheditems
     }
 
-    fun onitemclicked(item: item) {
-        currentitem.currentitem=item
+    fun onitemclicked(Item: Item) {
+        Currentitem.currentitem=Item
 
     }
 

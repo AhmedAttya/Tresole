@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.tresole.tresole.R
-import com.tresole.tresole.databinding.CategoriesFragmentBinding
 import com.tresole.tresole.databinding.SerchFragmentBinding
 
 class SearchFragment : Fragment() {
@@ -22,15 +21,14 @@ class SearchFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
-        _binding= SerchFragmentBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
+    ): View {
+        _binding = SerchFragmentBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
+        viewModel = ViewModelProvider(this)[SearchViewModel::class.java]
         binding.searchbutton.setOnClickListener {
             if(binding.searchinput.text.isEmpty())
             {

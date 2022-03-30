@@ -7,13 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.tresole.tresole.Categories.CategoriesViewModel
-import com.tresole.tresole.Categories.categoriesadapter
 import com.tresole.tresole.R
-import com.tresole.tresole.Util.Categories
-import com.tresole.tresole.Util.item
+import com.tresole.tresole.util.Item
 import com.tresole.tresole.databinding.CategoriesFragmentBinding
 
 
@@ -25,26 +21,25 @@ class SearchResultFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        _binding= CategoriesFragmentBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
+        _binding = CategoriesFragmentBinding.inflate(inflater, container, false)
+        return binding.root
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
+        viewModel = ViewModelProvider(this)[SearchViewModel::class.java]
         val searchresultRV=binding.categoriesrecyclerview
-        val searchresultadapter= searchresultadapter(viewModel.getsearcheditem())
+        val searchresultadapter= Searchresultadapter(this,viewModel.getsearcheditem())
         val layoutManager= LinearLayoutManager(this.context)
         layoutManager.orientation=LinearLayoutManager.VERTICAL
         searchresultRV.layoutManager=layoutManager
         searchresultRV.adapter=searchresultadapter
 
-        searchresultadapter.setOnItemClickListener(object : searchresultadapter.ClickListener
+        searchresultadapter.setOnItemClickListener(object : Searchresultadapter.ClickListener
         {
-            override fun onItemClick(v: View, item: item) {
-                viewModel.onitemclicked(item)
+            override fun onItemClick(v: View, Item: Item) {
+                viewModel.onitemclicked(Item)
                 findNavController().navigate(R.id.action_searchResultFragment_to_itemviewFragment)
             }
 
