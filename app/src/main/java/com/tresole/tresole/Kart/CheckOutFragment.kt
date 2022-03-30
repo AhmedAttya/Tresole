@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
+import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -81,7 +82,7 @@ class CheckOutFragment : Fragment() {
             else if(binding.checkoutCCradionbutton.isSelected&&binding.ccnumberinput.editText!!.text.toString()==""){
                 binding.ccnumberinput.error=getString(R.string.noccnumberentered)
             }
-            else if(binding.checkoutCCradionbutton.isSelected)
+            else if(binding.checkoutCCradionbutton.isChecked)
             {
                 viewModel.addCCshipment(binding.nameinput.editText!!.text.toString(),
                     binding.addressinput.editText!!.text.toString(),binding.cityinput.editText!!.text.toString(),
@@ -90,7 +91,7 @@ class CheckOutFragment : Fragment() {
                     "CC",kartcurrentitems.gettotal(),kartcurrentitems.getitemids())
                findNavController().navigate(R.id.action_checkOutFragment_to_store)
             }
-            else if(binding.checkoutCODradionbutton.isSelected)
+            else if(binding.checkoutCODradionbutton.isChecked)
             {
                 viewModel.addCODshipment(binding.nameinput.editText!!.text.toString(),
                     binding.addressinput.editText!!.text.toString(),binding.cityinput.editText!!.text.toString(),
@@ -99,7 +100,8 @@ class CheckOutFragment : Fragment() {
                     "COD",kartcurrentitems.gettotal(),kartcurrentitems.getitemids())
                 findNavController().navigate(R.id.action_checkOutFragment_to_store)
             }
-            else
+            else if(!binding.checkoutCODradionbutton.isChecked && !binding.checkoutCCradionbutton.isChecked)
+                Toast.makeText(this.context,binding.checkoutCODradionbutton.isSelected.toString()+binding.checkoutCCradionbutton.isSelected.toString(),Toast.LENGTH_LONG).show()
                 binding.checkoutCCradionbutton.error=getString(R.string.selectpaymentmethod)
         }
 

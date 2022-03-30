@@ -33,7 +33,6 @@ class itemviewFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(ItemviewViewModel::class.java)
-        Toast.makeText(this.context,"num ratings = "+viewModel.item.itemid+" "+viewModel.item.itemratings.size,Toast.LENGTH_LONG).show()
 
       binding.discounttextview.text=viewModel.item.itemdiscount.toString()+"% "+getString(R.string.discount)
       binding.itemtextview.text=viewModel.item.itemname
