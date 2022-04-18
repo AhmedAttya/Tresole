@@ -1,5 +1,6 @@
 package com.tresole.tresole.search
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.tresole.tresole.util.Currentitem
 import com.tresole.tresole.util.Item
@@ -7,12 +8,13 @@ import com.tresole.tresole.util.Itemutils
 import com.tresole.tresole.repository.Repository
 
 class SearchViewModel : ViewModel() {
+    var searcheditems=MutableLiveData<MutableList<Item>>()
     private val repo=Repository()
     fun search(text: String) {
-      Itemutils.searcheditems=  repo.search(text)
+      searcheditems=  repo.search(text)
     }
     fun getsearcheditem(): MutableList<Item> {
-        return Itemutils.searcheditems
+        return searcheditems.value!!
     }
 
     fun onitemclicked(Item: Item) {

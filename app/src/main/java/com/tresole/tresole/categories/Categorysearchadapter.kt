@@ -15,7 +15,7 @@ import com.tresole.tresole.repository.Repository
 
  class Categorysearchadapter(
      fragment: CategoyshowingFragment,
-     private val listitems: MutableList<Item>
+     private val listitems: MutableLiveData<MutableList<Item>>
  ) : RecyclerView.Adapter<Categorysearchadapter.ViewHolder>() {
     var clickListener: ClickListener? = null
      val lifecycleOwner =fragment
@@ -30,7 +30,7 @@ import com.tresole.tresole.repository.Repository
 
 
     override fun onBindViewHolder(holder: Categorysearchadapter.ViewHolder, position: Int) {
-        holder.bind(listitems[position])
+        holder.bind(listitems.value!![position])
 
 
     }
@@ -41,7 +41,7 @@ import com.tresole.tresole.repository.Repository
     }
 
     override fun getItemCount(): Int {
-        return listitems.size
+        return listitems.value!!.size
     }
     inner class ViewHolder (itemview : View) : RecyclerView.ViewHolder(itemview), View.OnClickListener {
        private val linearitemimage: ImageView =itemview.findViewById(R.id.linearitemimageview)
@@ -59,13 +59,13 @@ import com.tresole.tresole.repository.Repository
         fun bind(get: Item) {
             val textView = simplepriceview
             val nametextview = simpleitemview
-            textView.text = get.itemprice.toString() + lifecycleOwner.context!!.getText(R.string.EGP)
+            textView.text = get.itemprice.toString() + lifecycleOwner.requireContext().getText(R.string.EGP)
             nametextview.text = get.itemname
             val imageview = linearitemimage
-            getimage(get).observe(lifecycleOwner,
-                {
-                  imageview.setImageBitmap(it)
-                })
+            getimage(get).observe(lifecycleOwner
+            ) {
+                imageview.setImageBitmap(it)
+            }
             ratingbar.rating=rating(get)
 
         }
@@ -73,7 +73,7 @@ import com.tresole.tresole.repository.Repository
         override fun onClick(view: View?) {
             if (view != null) {
 
-                clickListener?.onItemClick(view, listitems[adapterPosition])
+                clickListener?.onItemClick(view, listitems.value!![adapterPosition])
             }
         }
 

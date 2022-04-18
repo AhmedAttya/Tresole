@@ -10,7 +10,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.tresole.tresole.R
 import com.tresole.tresole.util.Item
-import com.tresole.tresole.util.Itemutils
 import com.tresole.tresole.databinding.FragmentCategoyshowingBinding
 
 
@@ -34,7 +33,7 @@ class CategoyshowingFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         viewModel = ViewModelProvider(this)[CategoriesViewModel::class.java]
-        val categoryadapter=Categorysearchadapter(this,Itemutils.listofitems)
+        val categoryadapter=Categorysearchadapter(this,viewModel.categoryitemslist)
         val categoryshowRV=binding.categoryshowingRV
         val layoutManager = LinearLayoutManager(this.context)
         layoutManager.orientation=LinearLayoutManager.VERTICAL

@@ -52,35 +52,7 @@ class LoginFargment : Fragment() {
             .setAvailableProviders(providers)
             .build()
         signInLauncher.launch(signInIntent)
-      /*  startActivityForResult(AuthUI.getInstance()
-            .createSignInIntentBuilder()
-            .setAvailableProviders(listOf( AuthUI.IdpConfig.GoogleBuilder().build(),
-                AuthUI.IdpConfig.FacebookBuilder().build()
-                )).build(),SIGN_IN_RESULT_CODE)*/
-
     }
- /*   override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == SIGN_IN_RESULT_CODE) {
-            val response = IdpResponse.fromResultIntent(data)
-            if (resultCode == Activity.RESULT_OK) {
-                // Successfully signed in user.
-                Log.i(
-                    TAG,
-                    "Successfully signed in user " +
-                            "${FirebaseAuth.getInstance().currentUser?.displayName}!"
-
-                )
-                Currentuser.currentuser= FirebaseAuth.getInstance().currentUser!!.uid
-                findNavController().navigate(R.id.action_login_Fargment_to_store)
-            } else {
-                // Sign in failed. If response is null the user canceled the sign-in flow using
-                // the back button. Otherwise check response.getError().getErrorCode() and handle
-                // the error.
-                Log.i(TAG, "Sign in unsuccessful ${response?.error?.errorCode}")
-            }
-        }
-    }*/
 
     private fun onSignInResult(result: FirebaseAuthUIAuthenticationResult) {
         val response = result.idpResponse
