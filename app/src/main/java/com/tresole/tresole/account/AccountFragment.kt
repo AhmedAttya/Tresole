@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
 import com.tresole.tresole.R
 import com.tresole.tresole.databinding.AccountFragmentBinding
@@ -26,8 +27,8 @@ class AccountFragment : Fragment() {
         return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
         viewModel = ViewModelProvider(this)[AccountViewModel::class.java]
         binding.userwelcomemessage.text = getString(R.string.welcome)+" "+viewModel.getuserwelcomemessage()
         val adapter=Shipementsadapter(this,viewModel.getshipments())
@@ -41,7 +42,11 @@ class AccountFragment : Fragment() {
            binding.emptyRVmessage.visibility= View.VISIBLE
         }
         binding.signout.setOnClickListener {
-            FirebaseAuth.getInstance().signOut()
+            AuthUI.getInstance()
+                .signOut(this.requireContext())
+                .addOnCompleteListener {
+                    // ...
+                }
             findNavController().navigate(R.id.action_account2_to_login_Fargment)
         }
     }

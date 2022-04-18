@@ -26,8 +26,7 @@ class SearchFragment : Fragment() {
         return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         viewModel = ViewModelProvider(this)[SearchViewModel::class.java]
         binding.searchbutton.setOnClickListener {
             if(binding.searchinput.text.isEmpty())

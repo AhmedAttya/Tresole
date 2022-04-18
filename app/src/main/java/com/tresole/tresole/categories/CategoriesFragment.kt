@@ -32,8 +32,7 @@ class CategoriesFragment : Fragment() {
         _binding = null
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         viewModel = ViewModelProvider(this).get(CategoriesViewModel::class.java)
         val categoryRV=binding.categoriesrecyclerview
         val categoryadapter=Categoriesadapter(Categories.Categories.getlist())

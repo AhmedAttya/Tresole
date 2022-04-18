@@ -28,15 +28,14 @@ class ItemviewFragment : Fragment() {
         _binding = null
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         viewModel = ViewModelProvider(this)[ItemviewViewModel::class.java]
 
       binding.discounttextview.text=viewModel.Item.itemdiscount.toString()+"% "+getString(R.string.discount)
       binding.itemtextview.text=viewModel.Item.itemname
       binding.itemdescriptiontext.text=viewModel.Item.itemdescreption
       binding.imageView2.setImageBitmap(viewModel.getimage().value)
-        viewModel.getimage().observe(this,{
+        viewModel.getimage().observe(viewLifecycleOwner,{
             binding.imageView2.setImageBitmap(it)
         })
       binding.brandnametextview.text=getText(R.string.brandname).toString()+" " + viewModel.Item.itembrand

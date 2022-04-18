@@ -89,7 +89,7 @@ class Backend {
             itemids: MutableList<Long>
         ) {
 
-            val cshipment=Shipment(Currentuser.currentuser,getid(),name,address,city,state,zipcode, phonenumber, type,total,itemids,Date.from(Instant.now()),"SHIPPING")
+            val cshipment=Shipment(Currentuser.currentuser.uid,getid(),name,address,city,state,zipcode, phonenumber, type,total,itemids,Date.from(Instant.now()),"SHIPPING")
             boughtitems(itemids)
             databaseReference.child("shipments").child(cshipment.id.toString()).setValue(cshipment)
 
@@ -108,7 +108,7 @@ class Backend {
             total: Int,
             itemids: MutableList<Long>
         ) {
-            val cshipment=Shipment(Currentuser.currentuser,getid(),name,address,city,state,zipcode, phonenumber, type,total,
+            val cshipment=Shipment(Currentuser.currentuser.uid,getid(),name,address,city,state,zipcode, phonenumber, type,total,
                 itemids,Date.from(Instant.now()),"SHIPPING")
             boughtitems(itemids)
             databaseReference.child("shipments").child(cshipment.id.toString()).setValue(cshipment)
@@ -134,7 +134,7 @@ class Backend {
         }
 
         fun getshipments(): MutableList<Shipment> {
-            return allshipments.filter { it.userid==Currentuser.currentuser } as MutableList<Shipment>
+            return allshipments.filter { it.userid==Currentuser.currentuser.uid } as MutableList<Shipment>
         }
         fun getimage(imageloc: String) : MutableLiveData<Bitmap> {
             val bitmaplivedata=MutableLiveData<Bitmap>()

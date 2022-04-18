@@ -26,8 +26,7 @@ class SearchResultFragment : Fragment() {
         _binding = CategoriesFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         viewModel = ViewModelProvider(this)[SearchViewModel::class.java]
         val searchresultRV=binding.categoriesrecyclerview
         val searchresultadapter= Searchresultadapter(this,viewModel.getsearcheditem())

@@ -8,6 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.tresole.tresole.R
 import com.tresole.tresole.util.Shipment
 import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
+import java.util.*
 
 class Shipementsadapter(fragment: AccountFragment, private val listitems: MutableList<Shipment>) : RecyclerView.Adapter<Shipementsadapter.ViewHolder>() {
 
@@ -41,8 +45,9 @@ class Shipementsadapter(fragment: AccountFragment, private val listitems: Mutabl
             val formatter=SimpleDateFormat("dd-MM")
             idview.text = Shipment.id.toString()
             orderdateview.text = formatter.format(Shipment.date)
-            arrivaldateview.text = formatter.format(Shipment.date.day+7)
-            totalpriceview.text = Shipment.total.toString()+ lifecycleowner.context!!.getText(R.string.EGP)
+            val localDate = Shipment.date.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime().plusDays(7)
+            arrivaldateview.text =Date.from(localDate.atZone(ZoneId.systemDefault()).toInstant()).toString()
+            totalpriceview.text = Shipment.total.toString()+ lifecycleowner.requireContext().getText(R.string.EGP)
 
         }
 

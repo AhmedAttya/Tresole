@@ -27,11 +27,9 @@ class KartFragment : Fragment() {
         _binding = KartFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         viewModel = ViewModelProvider(this)[KartViewModel::class.java]
-        binding.totalpriceshow.text=viewModel.calcprice()+ this.context!!.getText(R.string.EGP)
+        binding.totalpriceshow.text=viewModel.calcprice()+ this.requireContext().getText(R.string.EGP)
         binding.proceedtocheckout.setOnClickListener {
             if(Kartcurrentitems.listofitems.isEmpty()){
                 findNavController().navigate(R.id.action_kartFragment_to_store)
@@ -51,7 +49,7 @@ class KartFragment : Fragment() {
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val pos = viewHolder.adapterPosition
                 Kartcurrentitems.listofitems.removeAt(pos)
-                binding.totalpriceshow.text=viewModel.calcprice()+ this@KartFragment.context!!.getText(R.string.EGP)
+                binding.totalpriceshow.text=viewModel.calcprice()+ this@KartFragment.requireContext().getText(R.string.EGP)
                kartadapter.notifyDataSetChanged()
             }
         }
@@ -61,7 +59,7 @@ class KartFragment : Fragment() {
         kartadapter.setOnItemClickListener(object :Kartadapter.ClickListener{
             override fun onItemClick(v: View, position: Int) {
                 Kartcurrentitems.listofitems.removeAt(position)
-                binding.totalpriceshow.text=viewModel.calcprice()+ this@KartFragment.context!!.getText(R.string.EGP)
+                binding.totalpriceshow.text=viewModel.calcprice()+ this@KartFragment.requireContext().getText(R.string.EGP)
                 kartadapter.notifyDataSetChanged()
             }
         })

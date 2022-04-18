@@ -32,8 +32,7 @@ class CategoyshowingFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         viewModel = ViewModelProvider(this)[CategoriesViewModel::class.java]
         val categoryadapter=Categorysearchadapter(this,Itemutils.listofitems)
         val categoryshowRV=binding.categoryshowingRV

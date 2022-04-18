@@ -1,14 +1,17 @@
 package com.tresole.tresole.util
 
-import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 
 class Currentuser {
     companion object{
+         lateinit var currentuser :FirebaseUser
         fun getcurrentusername(): String? {
-            return currentuserfull!!.displayName
+            return currentuser.displayName
         }
 
-        private var currentuserfull =FirebaseAuth.getInstance().currentUser
-        var currentuser= currentuserfull!!.uid
+        fun setcurrentuser(currentuser: FirebaseUser?){
+            this.currentuser= currentuser!!
+        }
+
     }
 }

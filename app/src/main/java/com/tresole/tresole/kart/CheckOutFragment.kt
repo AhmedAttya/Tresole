@@ -26,8 +26,7 @@ class CheckOutFragment : Fragment() {
         _binding = FragmentCheckOutBinding.inflate(inflater, container, false)
         return binding.root
     }
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         viewModel = ViewModelProvider(this)[KartViewModel::class.java]
         val months= listOf(1,2,3,4,5,6,7,8,9,10,11,12)
         val years = listOf(2022,2023,2024,2025,2026,2027,2028)
