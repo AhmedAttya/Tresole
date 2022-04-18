@@ -88,7 +88,6 @@ class LoginFargment : Fragment() {
             val user = FirebaseAuth.getInstance().currentUser
             Currentuser.setcurrentuser(user)
             findNavController().navigate(R.id.action_login_Fargment_to_store)
-            Toast.makeText(this.context,"login",Toast.LENGTH_LONG).show()
         } else {
             Log.e("signinerror",response.toString())
             // Sign in failed. If response is null the user canceled the
