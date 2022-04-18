@@ -5,8 +5,8 @@
     <string name="fb_application_id" translatable="false">5006043566084470</string>
     <string name="facebook_login_protocol_scheme" translatable="false">fb5006043566084470</string>
     <string name="fb_login_protocol_scheme">fb5006043566084470</string>
-    <string name="facebook_client_token">6a36c8438d378749b3a0041f02e903f2</string>
-    <string name="fb_client_token">6a36c8438d378749b3a0041f02e903f2</string>
+    <string name="facebook_client_token">f106faf09f37190a71c6d1aaf2da376a</string>
+    <string name="fb_client_token">f106faf09f37190a71c6d1aaf2da376a</string>
     <string name="facebook_app_id">5006043566084470</string>
     <string name="fb_app_id">5006043566084470</string>
     <string name="search_title">Search</string>
