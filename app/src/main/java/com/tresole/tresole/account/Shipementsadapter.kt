@@ -13,7 +13,7 @@ import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import java.util.*
 
-class Shipementsadapter(fragment: AccountFragment, private val listitems: MutableList<Shipment>) : RecyclerView.Adapter<Shipementsadapter.ViewHolder>() {
+class Shipementsadapter(fragment: AccountFragment, private val listitems: MutableList<Shipment>?) : RecyclerView.Adapter<Shipementsadapter.ViewHolder>() {
 
       val lifecycleowner=fragment
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Shipementsadapter.ViewHolder {
@@ -25,7 +25,7 @@ class Shipementsadapter(fragment: AccountFragment, private val listitems: Mutabl
 
 
     override fun onBindViewHolder(holder: Shipementsadapter.ViewHolder, position: Int) {
-        holder.bind(listitems[position])
+        holder.bind(listitems!![position])
 
 
     }
@@ -33,7 +33,7 @@ class Shipementsadapter(fragment: AccountFragment, private val listitems: Mutabl
 
 
     override fun getItemCount(): Int {
-        return listitems.size
+        return listitems!!.size
     }
     inner class ViewHolder (itemview : View) : RecyclerView.ViewHolder(itemview) {
         private val idview :TextView =itemview.findViewById(R.id.orderidshipmentinfo)

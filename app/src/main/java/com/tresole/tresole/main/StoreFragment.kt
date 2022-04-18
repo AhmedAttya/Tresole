@@ -49,10 +49,10 @@ class StoreFragment : Fragment() {
         frequentlyboughtRV.layoutManager =frequentlyboughtitemslayoutManager
 
 
-      val newandhotadapter=ItemAdapter(this,viewModel.getnewandhot())
-        val dealofthedayadapter =ItemAdapter(this,viewModel.getdealoftheday())
-        val recommendedadapter=ItemAdapter(this,viewModel.getrecommended())
-        val frequentlyboughtadapter=ItemAdapter(this,viewModel.getfrequentlybought())
+      val newandhotadapter=ItemAdapter(this,viewModel.getnewandhot().value)
+        val dealofthedayadapter =ItemAdapter(this,viewModel.getdealoftheday().value)
+        val recommendedadapter=ItemAdapter(this,viewModel.getrecommended().value)
+        val frequentlyboughtadapter=ItemAdapter(this,viewModel.getfrequentlybought().value)
         frequentlyboughtRV.adapter=frequentlyboughtadapter
         recommendedRV.adapter=recommendedadapter
         dealofthedayRV.adapter=dealofthedayadapter

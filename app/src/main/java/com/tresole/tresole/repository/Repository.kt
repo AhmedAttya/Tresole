@@ -6,7 +6,7 @@ import com.tresole.tresole.util.Item
 import com.tresole.tresole.util.Shipment
 
 class Repository() {
-    fun getnewnhot(): MutableList<Item> {
+    fun getnewnhot(): MutableLiveData<MutableList<Item>> {
 
         return Backend.getnewandhot3()
    }
@@ -17,15 +17,15 @@ class Repository() {
         Backend.initiate()
     }
 
-    fun getdealoftheday(): MutableList<Item> {
+    fun getdealoftheday(): MutableLiveData<MutableList<Item>> {
       return Backend.getdealoftheday()
     }
 
-    fun getfrequentlybought(): MutableList<Item> {
+    fun getfrequentlybought(): MutableLiveData<MutableList<Item>> {
         return Backend.getfrequentlybought()
     }
 
-    fun getrecommended(): MutableList<Item> {
+    fun getrecommended(): MutableLiveData<MutableList<Item>> {
         return Backend.getrecommended()
     }
 
@@ -33,12 +33,12 @@ class Repository() {
          Backend.addrating(Item,rate)
     }
 
-    fun getcategory(categoriesname: String): MutableList<Item> {
+    fun getcategory(categoriesname: String): MutableLiveData<MutableList<Item>> {
         return Backend.getcategory(categoriesname)
 
     }
 
-    fun search(text: String): MutableList<Item> {
+    fun search(text: String): MutableLiveData<MutableList<Item>> {
         return Backend.search(text)
 
     }
@@ -71,7 +71,7 @@ class Repository() {
         Backend.addCODshipment(name,address,city,state,zipcode,phonenumber,type,total,itemids)
     }
 
-    fun getshipments(): MutableList<Shipment> {
+    fun getshipments(): MutableLiveData<MutableList<Shipment>> {
         return Backend.getshipments()
 
     }

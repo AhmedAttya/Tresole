@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.firebase.ui.auth.AuthUI
-import com.google.firebase.auth.FirebaseAuth
 import com.tresole.tresole.R
 import com.tresole.tresole.databinding.AccountFragmentBinding
 
@@ -31,7 +30,7 @@ class AccountFragment : Fragment() {
 
         viewModel = ViewModelProvider(this)[AccountViewModel::class.java]
         binding.userwelcomemessage.text = getString(R.string.welcome)+" "+viewModel.getuserwelcomemessage()
-        val adapter=Shipementsadapter(this,viewModel.getshipments())
+        val adapter=Shipementsadapter(this,viewModel.getshipments().value)
         val recyclerView=binding.currentshipment
         val layoutManager=LinearLayoutManager(this.context)
         layoutManager.orientation=LinearLayoutManager.VERTICAL

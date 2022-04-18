@@ -1,5 +1,6 @@
 package com.tresole.tresole.account
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.tresole.tresole.util.Currentuser
 import com.tresole.tresole.util.Shipment
@@ -12,7 +13,7 @@ class AccountViewModel : ViewModel() {
 
     }
 
-    fun getshipments(): MutableList<Shipment> {
+    fun getshipments(): MutableLiveData<MutableList<Shipment>> {
         return repo.getshipments()
 
     }
